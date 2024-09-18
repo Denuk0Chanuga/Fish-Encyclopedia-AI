@@ -1,10 +1,17 @@
-# Fish-Encyclopedia-AI
-The Fish Encyclopedia AI is an automated system designed to generate scientific descriptions of various fish species. The project uses Perplexity AI to generate detailed information about fish, such as their characteristics, habitats, and behaviors. The fish names and images are input into the system, and it outputs scientific descriptions in alphabetical order.
+# Fish Encyclopedia AI
 
-Each fish's details are organized like an encyclopedia, with each fish starting on a new page. The project aims to automate the process of creating a fish encyclopedia using AI, saving time and ensuring accuracy.
+This project provides an automated system for generating and managing fish descriptions in an encyclopedia format.
 
-Key Features:
-AI-Generated Content: Uses Perplexity AI to generate scientific descriptions of fish species.
-Alphabetical Sorting: Fish details are organized alphabetically for easy navigation.
-Automated Documentation: Automatically creates a well-formatted document with each fish's description starting on a new page.
-GitHub Integration: Code is maintained and updated through a GitHub repository for version control and collaboration.
+## Features
+
+1. **User Interface**: Allows users to upload scientific names and photos of fish.
+2. **Data Storage**: Uses Google Sheets to store and verify data to avoid duplicates.
+3. **AI Integration**: Utilizes OpenAI to generate detailed descriptions of fish.
+4. **Document Management**: Updates a Google Doc with fish information and formatting.
+
+## Setup
+
+1. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+
