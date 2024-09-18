@@ -77,12 +77,12 @@ Fish-Encyclopedia-AI/
    cd fish-encyclopedia-interface
 
 2. Install dependencies:
-
+```bash
 npm install
 
 
 3. Start the React development server:
-
+```bash
 npm start
 
 
@@ -90,23 +90,23 @@ npm start
 Backend Setup
 
 1. Navigate to the backend directory:
-
+```bash
 cd fish-encyclopedia-backend
 
 
 2. Create a virtual environment (optional but recommended):
-
+```bash
 python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 
 3. Install Python dependencies:
-
+```bash
 pip install -r requirements.txt
 
 
 4. Run the Flask app:
-
+```bash
 python app.py
 
 
