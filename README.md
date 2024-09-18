@@ -1,4 +1,4 @@
-**Fish Encyclopedia AI**
+y**Fish Encyclopedia AI**
 
 The Fish Encyclopedia AI is a full-stack web application that allows users to upload scientific names and images of fish, generating detailed, AI-powered descriptions. The data is stored in Google Sheets to prevent duplicates, and the generated fish information is formatted and stored in a Google Document. The project uses React for the frontend interface and Flask for the backend, integrated with Google APIs.
 
@@ -90,10 +90,12 @@ Installation
 1. Clone the Repository:
 
 First, clone the repository to your local machine:
-
+ ``brush
 git clone https://github.com/your-username/Fish-Encyclopedia-AI.git
 cd Fish-Encyclopedia-AI
 
+
+´´
 
 2. Backend Setup:
 
@@ -209,8 +211,4 @@ Contributions
 
 Feel free to fork this repository, create a new branch, and submit pull requests for any improvements or bug fixes.
 
-
----
-
-This template includes the steps to set up the project, run both the backend and frontend, and covers the overall structure. You can adjust and expand on the content based on specific configurations you have in your project.
 
