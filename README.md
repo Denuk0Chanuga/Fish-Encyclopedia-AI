@@ -22,7 +22,7 @@ Fish-Encyclopedia-AI/
 ├── app.py                    
     # Main Flask application 
 │   
-├── requirements.txt    # Python dependencies
+├── requirements.txt # Python dependencies
 │   └── README.md 
 │   
 ├── .gitignore 
