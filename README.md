@@ -204,7 +204,4 @@ Contributions
 Feel free to fork this repository, create a new branch, and submit pull requests for any improvements or bug fixes.
 
 
----
-
-This template includes the steps to set up the project, run both the backend and frontend, and covers the overall structure. You can adjust and expand on the content based on specific configurations you have in your project.
 
