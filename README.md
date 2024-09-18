@@ -1,110 +1,163 @@
+Fish Encyclopedia AI
 
-***Fish Encyclopedia AI***
+This project aims to create a fish encyclopedia where users can upload fish images and names. The app will generate scientific descriptions of the fish, verify duplicate entries using Google Sheets, and store the generated content in a well-formatted Google Doc using AI.
 
-A web-based Fish Encyclopedia that allows users to upload fish photos, enter scientific details, and store them in a Google Sheet. The system generates detailed scientific descriptions using AI and organizes the fish details alphabetically in a Google Doc.
+Table of Contents
+
+1. Project Structure
+
+
+2. Prerequisites
+
+
+3. Installation
+
+
+4. Backend Setup
+
+
+5. Frontend Setup
+
+
+6. Running the Application
+
+
+7. API Endpoints
+
+
+8. Contributing
+
+
 
 Project Structure
 
+The project is structured into two main components:
+
+Backend: Python Flask app, responsible for processing requests, interacting with Google Sheets, and handling AI integration.
+
+Frontend: React app, responsible for the user interface where users can interact with the system.
+
+
 Fish-Encyclopedia-AI/
 │
-├── fish-encyclopedia-backend/     # Flask backend directory
-│   ├── app.py                     # Main Flask app file
-│   ├── service_account.json        # Google API service account file
-│   ├── requirements.txt            # Python dependencies
-│   └── utils/                      # Backend utility functions
-│       ├── gsheet_handler.py       # Google Sheets integration
-│       └── gdoc_handler.py         # Google Docs integration
-│
-├── fish-encyclopedia-interface/    # React frontend directory
-│   ├── public/                     # Public files
-│   ├── src/                        # React source code
-│   ├── package.json                # Frontend dependencies
-│   └── .env                        # Environment variables for API keys
-│
-└── README.md                       # Project documentation
+├── fish-encyclopedia-backend/
+│   ├── app.py              # Main Flask app
+│   ├── requirements.txt     # Backend dependencies
+│   ├── service_account.json # Google service account file (add your own credentials)
+│   └── ...
+├── fish-encyclopedia-interface/
+│   ├── public/              # Public folder for frontend
+│   ├── src/                 # Source code for React frontend
+│   ├── package.json         # Frontend dependencies
+│   └── ...
+├── README.md
+└── ...
 
 Prerequisites
 
-Before running this project, make sure you have the following installed:
+Before running the project, ensure you have the following installed on your machine:
 
 Python 3.x
 
-Node.js (for React)
+Node.js and npm
 
-Flask (for backend)
+Flask (installed via pip)
 
-Google API service account (for Sheets and Docs integration)
-
-React (for frontend)
+React (installed via npx or npm)
 
 
-Backend Setup (Flask)
+You will also need a Google Cloud project with a service account to interact with Google Sheets and Google Docs.
 
-1. Navigate to the Backend Directory:
+Installation
+
+1. Clone this repository:
+
+git clone https://github.com/your-username/Fish-Encyclopedia-AI.git
+cd Fish-Encyclopedia-AI
+
+
+
+Backend Setup
+
+1. Navigate to the backend directory:
 
 cd fish-encyclopedia-backend
 
 
-2. Create a Virtual Environment:
+2. Create and activate a virtual environment:
 
-python -m venv venv
-source venv/bin/activate   # For Windows use `venv\Scripts\activate`
+python3 -m venv venv
+source venv/bin/activate  # For Linux/MacOS
+venv\Scripts\activate     # For Windows
 
 
-3. Install Dependencies:
+3. Install the required dependencies:
 
 pip install -r requirements.txt
 
 
-4. Set Up Environment Variables:
-
-Ensure that SERVICE_ACCOUNT_FILE and SPREADSHEET_ID are set up properly in the .env file.
+4. Add your Google Cloud service_account.json to the fish-encyclopedia-backend/ directory. This is required for interacting with Google Sheets and Google Docs.
 
 
-5. Run the Flask App:
+5. Set the environment variables:
+
+export GOOGLE_APPLICATION_CREDENTIALS="service_account.json"
+
+
+6. Run the Flask backend:
 
 python app.py
 
 
-6. API Endpoints:
 
-GET /api/fish - Fetches fish data from Google Sheets.
+The backend will now be running on http://localhost:5000.
 
-POST /api/fish - Uploads fish details and photo to the system and updates the Google Sheet.
+Frontend Setup
 
+1. Navigate to the frontend directory:
 
-
-
-Frontend Setup (React)
-
-1. Navigate to the Frontend Directory:
-
-cd fish-encyclopedia-interface
+cd ../fish-encyclopedia-interface
 
 
-2. Install Dependencies:
+2. Install the dependencies:
 
 npm install
 
 
-3. Run the React App:
+3. Start the React development server:
 
 npm start
 
-The app should now be running on http://localhost:3000.
+
+
+The frontend will now be running on http://localhost:3000.
+
+Running the Application
+
+1. Ensure both the backend and frontend servers are running. Access the app by navigating to http://localhost:3000 in your web browser.
+
+
+2. The frontend communicates with the backend using API requests to submit fish data, fetch descriptions, and store data in Google Sheets and Docs.
 
 
 
-Google Sheets & Docs Integration
+API Endpoints
 
-1. Service Account:
+GET /api/fish
+Retrieves all the fish stored in the Google Sheets.
 
-Set up a Google API service account and enable Google Sheets and Google Docs APIs. Download the service_account.json file and place it in the fish-encyclopedia-backend directory.
-
-
-2. Google Sheet:
-
-Create a Google Sheet to store fish data and add the `SPREAD
+POST /api/fish
+Adds a new fish entry, generating scientific details using AI and storing the data in Google Sheets.
 
 
+Example POST request body:
 
+{
+  "name": "Clownfish",
+  "image_url": "https://example.com/clownfish.jpg",
+  "scientific_name": "Amphiprioninae"
+}
+
+Contributing
+
+Feel free to fork this project and submit pull requests if you wish to contribute. Any ideas, issues, or improvements are welcome.
