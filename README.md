@@ -43,19 +43,20 @@ Project Structure
 Fish-Encyclopedia-AI/
 │
 ├── fish-encyclopedia-backend/
-│   ├── app.py               # Flask app file
-│   ├── service_account.json  # Google API service account credentials
-│   ├── requirements.txt      # Python dependencies
+│   ├── app.py         # Flask app file
+│   ├── service_account.json  
+       # Google API service account credentials
+│   ├── requirements.txt # Python dependencies
 │   └── ...
 │
 ├── fish-encyclopedia-interface/
-│   ├── public/               # Public static files
-│   ├── src/                  # React components and frontend code
-│   ├── package.json          # Node.js dependencies
+│   ├── public/         # Public static files
+│   ├── src/  # React components and frontend code
+│   ├── package.json    # Node.js dependencies
 │   └── ...
 │
 ├── .gitignore
-├── README.md                 # Project documentation
+├── README.md        # Project documentation
 └── ...
 
 
@@ -88,9 +89,10 @@ Installation
 
 1. Clone the Repository:
 
+```brush
 git clone https://github.com/your-username/Fish-Encyclopedia-AI.git
 cd Fish-Encyclopedia-AI
-
+´´´
 
 2. Backend Setup:
 
